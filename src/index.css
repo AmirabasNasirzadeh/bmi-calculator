@@ -26,6 +26,13 @@ body {
   font-weight: 400;
 }
 
+@media(prefers-color-scheme: dark) {
+  :root {
+    filter: invert(1) hue-rotate(180deg);
+    transition: all 1s;
+  }
+}
+
 /* - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
@@ -37,6 +44,18 @@ body {
   gap: 3.2rem;
   width: fit-content;
   margin: 0 auto;
+}
+
+.screen-mode {
+  position: absolute;
+  top: 2.4rem;
+  left: 2.4rem;
+
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  border: #000 solid 2px;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .clear {
